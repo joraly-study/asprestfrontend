@@ -1,0 +1,68 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "category": "Наушники",
+      "name": "Наушники Apple AirPods Pro",
+      "image": "https://iphoriya.ru/wp-content/uploads/airpods-pro-2022.jpeg",
+      "price": 249.99,
+      "description": "Наушники с активным шумоподавлением и адаптивным звуком от Apple."
+    },
+    {
+      "id": 2,
+      "category": "Наушники",
+      "name": "Наушники Sony WH-1000XM4",
+      "image": "https://www.sony.ru/image/5d02da5df552836db894cead8a68f5f3?fmt=pjpeg&wid=330&bgcolor=FFFFFF&bgc=FFFFFF",
+      "price": 349.99,
+      "description": "Премиум-наушники с активным шумоподавлением и высоким качеством звука от Sony."
+    },
+    {
+      "id": 3,
+      "category": "Стереосистемы",
+      "name": "Стереосистема Bose Wave SoundTouch IV",
+      "image": "https://www.dj-store.ru/data/gallery_photos/img_src/181995_photo.jpg",
+      "price": 499.99,
+      "description": "Стильная и мощная стереосистема с поддержкой Wi-Fi и Bluetooth от Bose."
+    },
+    {
+      "id": 4,
+      "category": "Стереосистемы",
+      "name": "Стереосистема JBL Boombox 2",
+      "image": "https://rostov.pult.ru/upload/iblock/915/915a4416f39d6f1dd6769356c1242fea.jpg",
+      "price": 399.99,
+      "description": "Портативная стереосистема с мощным басом и длительным временем работы от JBL."
+    },
+    {
+      "id": 5,
+      "category": "МП3 плееры",
+      "name": "МП3 плеер Apple iPod Touch",
+      "image": "https://www.pro-air.ru/wp-content/uploads/2021/05/d4e4b6c47d45e324ca1c5922585b649f.jpg",
+      "price": 199.99,
+      "description": "Стильный и функциональный МП3 плеер с большим дисплеем и поддержкой приложений от Apple."
+    },
+    {
+      "id": 6,
+      "category": "МП3 плееры",
+      "name": "МП3 плеер Sony NW-A105",
+      "image": "https://store.sony.ru/common/img/catalogue/316686/8881cd81f2db970f87147db530094ddc-big.png",
+      "price": 229.99,
+      "description": "Аудиоплеер Hi-Res с поддержкой Wi-Fi и большим объемом памяти от Sony."
+    },
+    {
+      "id": 7,
+      "category": "Микрофоны",
+      "name": "Микрофон Rode NT1-A",
+      "image": "https://images.musicstore.de/images/1280/rode-nt1-a-complete-vocal-recording-solution_1_REC0007202-000.jpg",
+      "price": 229.00,
+      "description": "Профессиональный конденсаторный микрофон с низким уровнем шума от Rode."
+    },
+    {
+      "id": 8,
+      "category": "Микрофоны",
+      "name": "Микрофон Shure SM7B",
+      "image": "https://doctorhead.ru/upload/resize_cache/webp/iblock/1c1/shure_sm7b2.webp",
+      "price": 399.00,
+      "description": "Динамический микрофон с высоким качеством звука и эффективным подавлением шума от Shure."
+    }
+  ]
+}

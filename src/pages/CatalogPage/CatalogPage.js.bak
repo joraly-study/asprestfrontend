@@ -1,0 +1,61 @@
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
+import ProductList from '../../components/ProductList/ProductList';
+import Search from '../../components/Search/Search';
+import { Container, FormControl, InputLabel, MenuItem, Select } from '@mui/material';
+import ax from '../../axiosX'
+
+const CatalogPage = () => {
+    const [products, setProducts] = useState([]);
+    const [searchQuery, setSearchQuery] = useState('');
+    const [selectedCategory, setSelectedCategory] = useState('');
+
+    useEffect(() => {
+        const fetchProducts = async () => {
+            try {
+                const response = await ax.get('http://localhost:7878/products');
+                setProducts(response.data);
+            } catch (error) {
+                console.error('Error fetching products:', error);
+            }
+        };
+
+        fetchProducts();
+    }, []);
+
+    const handleSearch = (query) => {
+        setSearchQuery(query);
+    };
+
+    const handleCategoryChange = (event) => {
+        setSelectedCategory(event.target.value);
+    };
+
+    const filteredProducts = products.filter((product) =>
+        product.name.toLowerCase().includes(searchQuery.toLowerCase()) &&
+        (selectedCategory === '' || product.category === selectedCategory)
+    );
+
+    return (
+        <Container maxWidth="lg" style={{ marginTop: '80px' }}>
+            <Search onSearch={handleSearch} />
+            <FormControl fullWidth style={{ marginBottom: '10px' }}>
+                <InputLabel id="category-label">Категория</InputLabel>
+                <Select
+                    labelId="category-label"
+                    value={selectedCategory}
+                    onChange={handleCategoryChange}
+                >
+                    <MenuItem value="">Все категории</MenuItem>
+                    <MenuItem value="Наушники">Наушники</MenuItem>
+                    <MenuItem value="Стереосистемы">Стереосистемы</MenuItem>
+                    <MenuItem value="МП3 плееры">МП3 плееры</MenuItem>
+                    <MenuItem value="Микрофоны">Микрофоны</MenuItem>
+                </Select>
+            </FormControl>
+            <ProductList products={filteredProducts} />
+        </Container>
+    );
+};
+
+export default CatalogPage;
